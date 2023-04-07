@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CURRICULUM VITAE</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.picture {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin: auto;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		.picture img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #333;
+			background-color: #6b6a6a;
+		}
+
+		header {
+			background-color: #333;
+			color: #87b5f1;
+			padding: 20px;
+			text-align: center;
+		}
+
+		header h1 {
+			font-size: 36px;
+		}
+
+		header h2 {
+			font-size: 24px;
+		}
+
+		main {
+			margin: 20px auto;
+			max-width: 800px;
+			background-color: #87b5f1;
+			padding: 20px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		section {
+			margin-bottom: 20px;
+		}
+
+		section h3 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul li {
+			margin-bottom: 10px;
+		}
+
+		#download-pdf {
+			background-color: #87b5f1;
+			color: black;
+			border: 2px inset black;
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		footer {
+			background-color: #333;
+			color: #87b5f1;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+
+	<script src="html2pdf.bundle.min.js"></script>
+</head>
+
+<body >
+	<header>
+		<h1>CURRICULUM VITAE<br>
+			FOR<br>
+			ZIMUNHU LEON-PAUL T<br>
+		</h1>
+		<h2>INFORMATION SECURITY OFFICER</h2>
+	</header>
+
+	<main>
+		<section id="MyCV">
+			<div class="picture">
+				<img src="2022_03_19_16_08_IMG_0709(1).JPG" alt="No Photo">
+			</div>
+
+			<h3>Personal Information</h3>
+			<ul>
+				<li><strong>Name:</strong> ZIMUNHU LEON-PAUL T</li>
+				<li><strong>Email:</strong> leontaropafadzwa02@gmail.com</li>
+				<li><strong>Phone:</strong> +263 784 118 216</li>
+				<li><strong>Address:</strong> 20 546 COOPER CHADWICK ROAD, SOUTHERTON, HARARE, ZIMBABWE</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Education</h3>
+			<ul>
+				<li><strong>Degree:</strong> BACHELOR'S DEGREE HONOURS IN INFORMATION SECURITY AND ASSURANCE</li>
+				<li><strong>Institution:</strong> HARARE INSTITUTE OF TECHNOLOGY</li>
+				<li><strong>Year:</strong> 2023</li>
+			</ul>
+			<ul>
+				<li><strong>Degree:</strong> NATIONAL CERTIFICATE IN GRAPHIC DESIGN</li>
+				<li><strong>Institution:</strong> ZIMBABWE MEDIA CONSULTANT</li>
+				<li><strong>Year:</strong> 2019</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3> Work Experience</h3>
+			<ul>
+				<li><strong>Job Title:</strong> INFOMATION SECURITY MANAGER</li>
+				<li><strong>Company:</strong> TASVATION (PVT) LTD.</li>
+				<li><strong>Duration:</strong> 2020 - 2023</li>
+			</ul>
+			<ul>
+				<li><strong>Job Title:</strong> GRAPHIC DESIGNER</li>
+				<li><strong>Company:</strong> ISUSU (PVT) LTD.</li>
+				<li><strong>Duration:</strong> 2019 - 2022</li>
+			</ul>
+		</section>
+
+		<section>
+			<h3>Skills</h3>
+			<ul>
+				<li>INFOMATION SECURITY OFFICER</li>
+				<li>SOFTWARE DEVELOPER</li>
+				<li>COMPUTER PROGRAMMER</li>
+				<li>GRAPHIC DESIGNER</li>
+			</ul>
+		</section>
+	</main>
+
+	<button id="download-pdf">Download as PDF</button>
+
+	<script>
+		const downloadButton = document.getElementById("download-pdf");
+
+		function generatePDF() {
+			const element = document.getElementById('MyCv');
+			html2pdf().from(element).save();
+		}
+
+	</script>
+	<footer>
+		<p>&copy; Leon-paul.Tee | All rights reserved</p>
+	</footer>
+
+</body>
+
+</html>
